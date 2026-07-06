@@ -1,5 +1,5 @@
 {
-  "workspace_name": "IBST_Glazing_Test",
+  "workspace_name": "IBST_Glazing",
   "scope": {
     "purpose": "Analyse and standardise the workflow for importing external glazing data into DesignBuilder.",
     "domain": "DesignBuilder glazing imported from external data sources"

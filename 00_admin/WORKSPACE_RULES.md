@@ -7,13 +7,13 @@ Phạm vi: root workspace `D:\Design Builder\DB_Library_Edit` và các workspace
 
 `DB_LIBRARY_EDIT` là workspace quản lý, kiểm thử và chuẩn hóa dữ liệu thư viện DesignBuilder. Trạng thái hiện tại tập trung vào các nhóm dữ liệu:
 
-- `IBST_Materials_Test`: kiểm thử dữ liệu vật liệu.
-- `IBST_Glazing_Test`: kiểm thử dữ liệu kính/glazing.
-- `IBST_Construction_Test`: kiểm thử dữ liệu kết cấu/construction.
+- `IBST_Materials`: kiểm thử dữ liệu vật liệu.
+- `IBST_Glazing`: kiểm thử dữ liệu kính/glazing.
+- `IBST_Construction`: kiểm thử dữ liệu kết cấu/construction.
 - `scripts`: công cụ Python dùng chung.
 - `00_admin`: tài liệu quản trị, quy tắc, quy ước và hướng dẫn môi trường.
 
-`IBST_Materials_Library` đã được xóa khỏi workspace. Vì vậy hiện tại **chưa có workspace release chính thức** trong root này. Các workspace `*_Test` được xem là vùng kiểm thử/chuẩn bị dữ liệu, không tự động được coi là nguồn phát hành cuối.
+`IBST_Materials_Library` đã được xóa khỏi workspace. Vì vậy hiện tại **chưa có workspace release chính thức** trong root này. Các workspace `IBST_Materials`, `IBST_Glazing` và `IBST_Construction` được xem là vùng kiểm thử/chuẩn bị dữ liệu, không tự động được coi là nguồn phát hành cuối.
 
 ## Quy tắc nền tảng
 
@@ -31,8 +31,8 @@ Phạm vi: root workspace `D:\Design Builder\DB_Library_Edit` và các workspace
 
 ### Rule 03: Chưa phát hành từ workspace test
 
-- Các thư mục `*_Test` là nơi kiểm thử, đối chiếu, import thử và ghi nhận kết quả.
-- Không coi file trong `*_Test` là bản phát hành chính thức nếu chưa có bước review/validation riêng.
+- Các thư mục `IBST_Materials`, `IBST_Glazing` và `IBST_Construction` là nơi kiểm thử, đối chiếu, import thử và ghi nhận kết quả.
+- Không coi file trong `IBST_Materials`, `IBST_Glazing` và `IBST_Construction` là bản phát hành chính thức nếu chưa có bước review/validation riêng.
 - Nếu sau này cần release chính thức, nên tạo quy trình hoặc workspace release rõ ràng trước.
 
 ### Rule 04: Source/reference là read-only về quy trình

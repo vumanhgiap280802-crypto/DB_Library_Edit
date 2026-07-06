@@ -1,5 +1,5 @@
 {
-  "workspace_name": "IBST_Materials_Test",
+  "workspace_name": "IBST_Materials",
   "scope": {
     "purpose": "Analyse and standardise the workflow for importing external material data into DesignBuilder.",
     "domain": "DesignBuilder materials imported from external data sources"

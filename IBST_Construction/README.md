@@ -1,10 +1,10 @@
-# IBST_Construction_Test
+# IBST_Construction
 
 Workspace nay duoc dung de phan tich va chuan hoa quy trinh tao construction package moi tu du lieu ben ngoai, sau do dong goi de import vao DesignBuilder.
 
 ## Muc tieu hien tai
 
-- dong bo workspace theo mo hinh van hanh cua `IBST_Materials_Test`
+- dong bo workspace theo mo hinh van hanh cua `IBST_Materials`
 - chuan bi reference/input/output/script structure cho construction workflow
 - khoa lai cac rule de sau nay co the bo sung mapping `CSV -> CDT -> DDF`
 - giu lai skeleton cu trong `99_archive/legacy_workspace_20260418/`

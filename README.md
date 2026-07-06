@@ -51,9 +51,9 @@ DB_LIBRARY_EDIT/
 |   |-- setup_python_env.ps1
 |   `-- setup_python_env.sh
 |-- IBST_Materials_Library/
-|-- IBST_Materials_Test/
-|-- IBST_Glazing_Test/
-|-- IBST_Construction_Test/
+|-- IBST_Materials/
+|-- IBST_Glazing/
+|-- IBST_Construction/
 `-- 04_build_candidates/
 ```
 
@@ -62,9 +62,9 @@ DB_LIBRARY_EDIT/
 | Workspace | Vai trò | Trạng thái hiện tại |
 | --- | --- | --- |
 | `IBST_Materials_Library` | Workspace chính thức cho dữ liệu Materials | Có tài liệu quản trị và lịch sử phân tích |
-| `IBST_Materials_Test` | Workspace thử nghiệm sinh Materials | Có CSV đầu vào, reference CDT/DDF, script generator và output đã sinh |
-| `IBST_Glazing_Test` | Workspace thử nghiệm sinh Glazing | Hỗ trợ Glazing, Panes và WindowGas |
-| `IBST_Construction_Test` | Workspace thử nghiệm sinh Constructions | Hỗ trợ CSV dạng long-by-layer và đóng gói DDF |
+| `IBST_Materials` | Workspace thử nghiệm sinh Materials | Có CSV đầu vào, reference CDT/DDF, script generator và output đã sinh |
+| `IBST_Glazing` | Workspace thử nghiệm sinh Glazing | Hỗ trợ Glazing, Panes và WindowGas |
+| `IBST_Construction` | Workspace thử nghiệm sinh Constructions | Hỗ trợ CSV dạng long-by-layer và đóng gói DDF |
 | `04_build_candidates` | Khu vực chứa build candidate tổng hợp | Có candidate gộp Materials, Glazing và Constructions |
 
 ## Chức Năng Hiện Có
@@ -74,13 +74,13 @@ DB_LIBRARY_EDIT/
 Workspace:
 
 ```text
-IBST_Materials_Test
+IBST_Materials
 ```
 
 Script chính:
 
 ```powershell
-cd IBST_Materials_Test\04_scripts
+cd IBST_Materials\04_scripts
 ..\..\.venv\Scripts\python.exe .\build_materials_package.py --mode preflight
 ```
 
@@ -102,13 +102,13 @@ này.
 Workspace:
 
 ```text
-IBST_Glazing_Test
+IBST_Glazing
 ```
 
 Script chính:
 
 ```powershell
-cd IBST_Glazing_Test\04_scripts
+cd IBST_Glazing\04_scripts
 ..\..\.venv\Scripts\python.exe .\build_glazing_package.py --input-file glazing_input_doors_simple_for_designbuilder.csv
 ```
 
@@ -125,13 +125,13 @@ Workflow Glazing hiện hỗ trợ:
 Workspace:
 
 ```text
-IBST_Construction_Test
+IBST_Construction
 ```
 
 Script chính:
 
 ```powershell
-cd IBST_Construction_Test\04_scripts
+cd IBST_Construction\04_scripts
 ..\..\.venv\Scripts\python.exe .\build_constructions_package.py --mode preflight
 ```
 
@@ -262,11 +262,11 @@ Các hướng cần thận trọng cao:
 Gợi ý tên workspace test trong tương lai:
 
 ```text
-IBST_Schedules_Test/
-IBST_ActivityTemplates_Test/
-IBST_HVAC_Templates_Test/
-IBST_SummaryOutput_Test/
-IBST_Scripts_Test/
+IBST_Schedules/
+IBST_ActivityTemplates/
+IBST_HVAC_Templates/
+IBST_SummaryOutput/
+IBST_Scripts/
 ```
 
 Mỗi workspace test mới nên đi theo pattern hiện tại:
@@ -318,10 +318,10 @@ Các lệnh kiểm tra nên chạy trước:
 $env:PYTHONIOENCODING='utf-8'
 .\.venv\Scripts\python.exe .\scripts\smoke_test.py
 
-cd IBST_Materials_Test\04_scripts
+cd IBST_Materials\04_scripts
 ..\..\.venv\Scripts\python.exe .\build_materials_package.py --mode preflight
 
-cd ..\..\IBST_Construction_Test\04_scripts
+cd ..\..\IBST_Construction\04_scripts
 ..\..\.venv\Scripts\python.exe .\build_constructions_package.py --mode preflight
 ```
 

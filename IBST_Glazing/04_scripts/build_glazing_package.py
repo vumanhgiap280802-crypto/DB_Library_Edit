@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-IBST_Glazing_Test - build Glazing CDT/DDF from CSV input.
+IBST_Glazing - build Glazing CDT/DDF from CSV input.
 
 This is a narrow generator for the current glazing test workflow. It uses the
 captured DesignBuilder Glazing.cdt reference as the schema/seed source, then

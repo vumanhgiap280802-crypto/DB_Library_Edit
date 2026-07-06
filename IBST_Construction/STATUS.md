@@ -4,7 +4,7 @@
 
 - Da archive skeleton cu vao `99_archive/legacy_workspace_20260418/`
 - Da tai cau truc workspace thanh 5 nhom: `01_designbuilder_format`, `02_csv_input`, `03_output`, `04_scripts`, `99_archive`
-- Da tao `README.md`, `RULES.md`, `STATUS.md`, va `workspace_rules.json` theo mo hinh cua `IBST_Materials_Test`
+- Da tao `README.md`, `RULES.md`, `STATUS.md`, va `workspace_rules.json` theo mo hinh cua `IBST_Materials`
 - Da tao `04_scripts/build_constructions_package.py` lam entry point chuan cho workspace
 - Da co reference DDF that tai `01_designbuilder_format/Construction sample.DDF`
 - Da trich `Constructions_exported_reference.cdt` tu `Construction sample.DDF`

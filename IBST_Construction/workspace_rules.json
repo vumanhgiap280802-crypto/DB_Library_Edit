@@ -1,5 +1,5 @@
 {
-  "workspace_name": "IBST_Construction_Test",
+  "workspace_name": "IBST_Construction",
   "scope": {
     "purpose": "Analyse and standardise the workflow for importing external construction data into DesignBuilder.",
     "domain": "DesignBuilder constructions imported from external data sources"
@@ -79,16 +79,16 @@
     },
     "material_lookup": {
       "id_priority": [
-        "../IBST_Materials_Test/03_output/*/Materials_generated.cdt",
-        "../IBST_Materials_Test/01_designbuilder_format/Materials_FULL_FINAL_QA.cdt",
+        "../IBST_Materials/03_output/*/Materials_generated.cdt",
+        "../IBST_Materials/01_designbuilder_format/Materials_FULL_FINAL_QA.cdt",
         "01_designbuilder_format/Construction sample.DDF::Materials.cdt"
       ],
       "default_thickness_priority": [
-        "../IBST_Materials_Test/01_designbuilder_format/Materials_FULL_FINAL_QA.cdt",
-        "../IBST_Materials_Test/03_output/*/Materials_generated.cdt",
-        "../IBST_Materials_Test/02_csv_input/materials_detailed.csv",
-        "../IBST_Materials_Test/02_csv_input/designbuilder_materials_10_excluding_uploaded.csv",
-        "../IBST_Materials_Test/02_csv_input/materials_nomass.csv"
+        "../IBST_Materials/01_designbuilder_format/Materials_FULL_FINAL_QA.cdt",
+        "../IBST_Materials/03_output/*/Materials_generated.cdt",
+        "../IBST_Materials/02_csv_input/materials_detailed.csv",
+        "../IBST_Materials/02_csv_input/designbuilder_materials_10_excluding_uploaded.csv",
+        "../IBST_Materials/02_csv_input/materials_nomass.csv"
       ]
     }
   },

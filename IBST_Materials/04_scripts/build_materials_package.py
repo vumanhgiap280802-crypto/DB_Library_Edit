@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-IBST_Materials_Test - Standard Build Entry Point
+IBST_Materials - Standard Build Entry Point
 
 This script is the single entry point for the workspace workflow.
 
@@ -1895,7 +1895,7 @@ def run_generate_ddf(paths: WorkspacePaths, config: dict, schema: dict) -> int:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Validate IBST_Materials_Test workspace, analyse rule compliance, and generate rule-based CDT/DDF outputs."
+        description="Validate IBST_Materials workspace, analyse rule compliance, and generate rule-based CDT/DDF outputs."
     )
     parser.add_argument(
         "--mode",

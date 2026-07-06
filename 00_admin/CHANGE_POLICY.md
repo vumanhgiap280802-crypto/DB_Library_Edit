@@ -8,9 +8,9 @@ Chính sách này giúp tránh mất dữ liệu, sửa nhầm artifact DesignBu
 
 Áp dụng cho root workspace và các workspace con:
 
-- `IBST_Materials_Test`
-- `IBST_Glazing_Test`
-- `IBST_Construction_Test`
+- `IBST_Materials`
+- `IBST_Glazing`
+- `IBST_Construction`
 
 ## Phân loại file
 

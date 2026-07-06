@@ -114,9 +114,9 @@ DB_LIBRARY_EDIT/
 |-- .github/
 |-- .vscode/
 |-- scripts/
-|-- IBST_Materials_Test/
-|-- IBST_Glazing_Test/
-`-- IBST_Construction_Test/
+|-- IBST_Materials/
+|-- IBST_Glazing/
+`-- IBST_Construction/
 ```
 
 `IBST_Materials_Library` đã được xóa và không còn là một phần của cấu trúc hiện tại.

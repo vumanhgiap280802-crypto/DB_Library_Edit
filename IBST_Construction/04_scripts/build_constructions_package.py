@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-IBST_Construction_Test - Standard Build Entry Point
+IBST_Construction - Standard Build Entry Point
 
 This script is the single entry point for the current construction-test workflow.
 
@@ -2278,7 +2278,7 @@ def run_preflight(paths: WorkspacePaths, config: dict, selected_csv_names: tuple
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Validate IBST_Construction_Test workspace structure and analyse captured construction references."
+        description="Validate IBST_Construction workspace structure and analyse captured construction references."
     )
     parser.add_argument(
         "--mode",

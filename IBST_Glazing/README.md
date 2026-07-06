@@ -1,4 +1,4 @@
-# IBST_Glazing_Test
+# IBST_Glazing
 
 Workspace nay duoc dung de phan tich va chuan hoa quy trinh tao glazing package moi tu du lieu ben ngoai, sau do dong goi de import vao DesignBuilder.
 

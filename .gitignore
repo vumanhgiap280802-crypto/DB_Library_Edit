@@ -56,14 +56,14 @@ temp/
 *.log
 
 # Generated pipeline outputs
-IBST_Materials_Test/03_output/*
-!IBST_Materials_Test/03_output/run_20260418_155426/
-!IBST_Materials_Test/03_output/run_20260418_155426/**
+IBST_Materials/03_output/*
+!IBST_Materials/03_output/run_20260418_155426/
+!IBST_Materials/03_output/run_20260418_155426/**
 
-IBST_Glazing_Test/03_output/*
-!IBST_Glazing_Test/03_output/glazing_input_doors_simple_for_designbuilder_20260603_145055/
-!IBST_Glazing_Test/03_output/glazing_input_doors_simple_for_designbuilder_20260603_145055/**
+IBST_Glazing/03_output/*
+!IBST_Glazing/03_output/glazing_input_doors_simple_for_designbuilder_20260603_145055/
+!IBST_Glazing/03_output/glazing_input_doors_simple_for_designbuilder_20260603_145055/**
 
-IBST_Construction_Test/03_output/*
-!IBST_Construction_Test/03_output/construction-input-3-brick-walls/
-!IBST_Construction_Test/03_output/construction-input-3-brick-walls/**
+IBST_Construction/03_output/*
+!IBST_Construction/03_output/construction-input-3-brick-walls/
+!IBST_Construction/03_output/construction-input-3-brick-walls/**

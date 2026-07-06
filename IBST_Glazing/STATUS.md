@@ -2,7 +2,7 @@
 
 ## Workspace State
 
-- Da tao workspace `IBST_Glazing_Test` cung cap voi `IBST_Materials_Test` va `IBST_Construction_Test`.
+- Da tao workspace `IBST_Glazing` cung cap voi `IBST_Materials` va `IBST_Construction`.
 - Da tao cau truc 5 nhom: `01_designbuilder_format`, `02_csv_input`, `03_output`, `04_scripts`, `99_archive`.
 - Da tao `README.md`, `RULES.md`, `STATUS.md`, va `workspace_rules.json`.
 - Da co reference DDF that: `01_designbuilder_format/Sample_Glazing.DDF`.
