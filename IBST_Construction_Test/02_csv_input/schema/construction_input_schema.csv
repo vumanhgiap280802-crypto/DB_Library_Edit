@@ -1,0 +1,8 @@
+column_name,required,data_type,allowed_values,cdt_field,default_value_or_rule,notes
+construction_code,yes,string,,diagnostic/group key,,Used with construction_name and category to group layer rows into one construction. Not written directly to CDT when construction_name is the target name.
+construction_name,yes,string,,Name,,Target DesignBuilder construction name. Trim whitespace. Must not contain # because CDT uses # as delimiter.
+category,yes,enum,External Wall;Internal Partition;Ground Floor;Door,CategoryId,,Mapped to DesignBuilder CategoryId: External Wall=1; Internal Partition=2; Ground Floor=12; Door=9.
+layer_order,yes,integer_positive,,Mat i/Thick i slot,,Layer sequence inside each grouped construction. Current CDT reference has 20 Mat/Thick slots.
+material_name,yes,string,,Mat i,resolve material Id from catalog,Logical material name. Must exist in the material catalogs configured by workspace_rules.json.
+thickness_override_m,no,decimal_positive,,Thick i,use material default thickness when blank,Optional layer thickness in meters. Leave blank to use default thickness from material source.
+notes,no,string,,Description,first non-empty note in group,Copied to DesignBuilder Description from the first non-empty note in each construction group. # is replaced by space before CDT generation.

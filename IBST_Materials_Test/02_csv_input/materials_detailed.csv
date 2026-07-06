@@ -1,0 +1,22 @@
+Name,Type,Roughness,DefaultThickness_m,Conductivity_W_mK,Density_kg_m3,SpecificHeat_J_kgK,ThermalAbsorptance,SolarAbsorptance,VisibleAbsorptance,ForceThickness,Notes
+IBST_BRICK_CLAY_110,Detailed,Rough,0.110,0.77,1700,840,0.90,0.65,0.65,Yes,Gach dat nung 110mm
+IBST_BRICK_CLAY_150,Detailed,Rough,0.150,0.77,1700,840,0.90,0.65,0.65,Yes,Gach dat nung 150mm
+IBST_AAC_BLOCK_100,Detailed,Rough,0.100,0.16,650,1000,0.90,0.60,0.60,Yes,Gach AAC 100mm
+IBST_AAC_BLOCK_200,Detailed,Rough,0.200,0.16,650,1000,0.90,0.60,0.60,Yes,Gach AAC 200mm
+IBST_CONCRETE_NORMAL_100,Detailed,MediumRough,0.100,1.75,2300,880,0.90,0.65,0.65,Yes,Be tong thuong 100mm
+IBST_CONCRETE_NORMAL_150,Detailed,MediumRough,0.150,1.75,2300,880,0.90,0.65,0.65,Yes,Be tong thuong 150mm
+IBST_CEMENT_MORTAR_15,Detailed,MediumSmooth,0.015,0.93,1800,840,0.90,0.70,0.70,Yes,Vua xi mang 15mm
+IBST_CEMENT_MORTAR_20,Detailed,MediumSmooth,0.020,0.93,1800,840,0.90,0.70,0.70,Yes,Vua xi mang 20mm
+IBST_GYPSUM_BOARD_9P5,Detailed,Smooth,0.0095,0.25,800,1090,0.90,0.50,0.50,Yes,Tam thach cao 9.5mm
+IBST_GYPSUM_BOARD_12P5,Detailed,Smooth,0.0125,0.25,800,1090,0.90,0.50,0.50,Yes,Tam thach cao 12.5mm
+IBST_EPS_25,Detailed,Smooth,0.025,0.036,20,1400,0.90,0.50,0.50,Yes,Xop EPS 25mm
+IBST_EPS_50,Detailed,Smooth,0.050,0.036,20,1400,0.90,0.50,0.50,Yes,Xop EPS 50mm
+IBST_XPS_25,Detailed,Smooth,0.025,0.030,35,1450,0.90,0.50,0.50,Yes,Xop XPS 25mm
+IBST_XPS_50,Detailed,Smooth,0.050,0.030,35,1450,0.90,0.50,0.50,Yes,Xop XPS 50mm
+IBST_MINERAL_WOOL_50,Detailed,VeryRough,0.050,0.040,80,840,0.90,0.50,0.50,Yes,Bong khoang 50mm
+IBST_MINERAL_WOOL_75,Detailed,VeryRough,0.075,0.040,80,840,0.90,0.50,0.50,Yes,Bong khoang 75mm
+IBST_PLYWOOD_12,Detailed,MediumSmooth,0.012,0.13,550,1600,0.90,0.78,0.78,Yes,Van ep 12mm
+IBST_CERAMIC_TILE_10,Detailed,Smooth,0.010,1.05,2000,840,0.90,0.60,0.60,Yes,Gach ceramic 10mm
+IBST_FIBER_CEMENT_BOARD_12,Detailed,Smooth,0.012,0.35,1350,1000,0.90,0.65,0.65,Yes,Tam xi mang soi 12mm
+IBST_WOOD_SOFT_20,Detailed,MediumSmooth,0.020,0.12,500,1600,0.90,0.78,0.78,Yes,Go mem 20mm
+IBST_PLASTER_GYPSUM_15,Detailed,Smooth,0.015,0.48,950,1090,0.90,0.65,0.65,Yes,Trat thach cao 15mm

@@ -1,0 +1,69 @@
+# Python environment
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+
+# Testing
+.pytest_cache/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+
+# Linting
+.ruff_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Backup files
+*.bak_*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific
+logs/
+temp/
+*.log
+
+# Generated pipeline outputs
+IBST_Materials_Test/03_output/*
+!IBST_Materials_Test/03_output/run_20260418_155426/
+!IBST_Materials_Test/03_output/run_20260418_155426/**
+
+IBST_Glazing_Test/03_output/*
+!IBST_Glazing_Test/03_output/glazing_input_doors_simple_for_designbuilder_20260603_145055/
+!IBST_Glazing_Test/03_output/glazing_input_doors_simple_for_designbuilder_20260603_145055/**
+
+IBST_Construction_Test/03_output/*
+!IBST_Construction_Test/03_output/construction-input-3-brick-walls/
+!IBST_Construction_Test/03_output/construction-input-3-brick-walls/**

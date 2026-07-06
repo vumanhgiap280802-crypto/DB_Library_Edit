@@ -1,0 +1,443 @@
+{
+  "sample_file": "Sample_Glazing.DDF",
+  "internal_ddf_entry_name": "Panes.cdt",
+  "schema_type": "DesignBuilder Panes CDT reference schema",
+  "generated_from": "Panes_exported_reference.cdt",
+  "generated_at_local": "2026-06-03 13:39:20",
+  "source_encoding": "utf-8-sig",
+  "delimiter": "#",
+  "line_structure": [
+    {
+      "line_number": 1,
+      "role": "category_ids",
+      "count": 5
+    },
+    {
+      "line_number": 2,
+      "role": "header_fields",
+      "count": 27
+    },
+    {
+      "line_number": "3..end",
+      "role": "record_rows",
+      "count": 1
+    }
+  ],
+  "counts": {
+    "line_count_at_capture": 3,
+    "category_id_count": 5,
+    "field_count": 27,
+    "record_count_at_capture": 1,
+    "record_field_counts_unique": [
+      27
+    ]
+  },
+  "category_ids": [
+    "558",
+    "559",
+    "560",
+    "561",
+    "562"
+  ],
+  "fields": [
+    "Id",
+    "Name",
+    "CategoryId",
+    "SourceId",
+    "Thickness",
+    "SolarTransmittance",
+    "FrontSolarReflectance",
+    "BackSolarReflectance",
+    "VisibleTransmittance",
+    "FrontVisibleReflectance",
+    "BackVisibleReflectance",
+    "InfraRedTransmittance",
+    "FrontInfraRedReflectance",
+    "BackInfraRedReflectance",
+    "Conductivity",
+    "RegionId",
+    "Source",
+    "Locked",
+    "Scratch",
+    "IsSystem",
+    "Description",
+    "NFRCID",
+    "Colour",
+    "DataType",
+    "UseFlipped",
+    "IGDBName",
+    "SpectralData"
+  ],
+  "field_details": [
+    {
+      "index": 1,
+      "name": "Id"
+    },
+    {
+      "index": 2,
+      "name": "Name"
+    },
+    {
+      "index": 3,
+      "name": "CategoryId"
+    },
+    {
+      "index": 4,
+      "name": "SourceId"
+    },
+    {
+      "index": 5,
+      "name": "Thickness"
+    },
+    {
+      "index": 6,
+      "name": "SolarTransmittance"
+    },
+    {
+      "index": 7,
+      "name": "FrontSolarReflectance"
+    },
+    {
+      "index": 8,
+      "name": "BackSolarReflectance"
+    },
+    {
+      "index": 9,
+      "name": "VisibleTransmittance"
+    },
+    {
+      "index": 10,
+      "name": "FrontVisibleReflectance"
+    },
+    {
+      "index": 11,
+      "name": "BackVisibleReflectance"
+    },
+    {
+      "index": 12,
+      "name": "InfraRedTransmittance"
+    },
+    {
+      "index": 13,
+      "name": "FrontInfraRedReflectance"
+    },
+    {
+      "index": 14,
+      "name": "BackInfraRedReflectance"
+    },
+    {
+      "index": 15,
+      "name": "Conductivity"
+    },
+    {
+      "index": 16,
+      "name": "RegionId"
+    },
+    {
+      "index": 17,
+      "name": "Source"
+    },
+    {
+      "index": 18,
+      "name": "Locked"
+    },
+    {
+      "index": 19,
+      "name": "Scratch"
+    },
+    {
+      "index": 20,
+      "name": "IsSystem"
+    },
+    {
+      "index": 21,
+      "name": "Description"
+    },
+    {
+      "index": 22,
+      "name": "NFRCID"
+    },
+    {
+      "index": 23,
+      "name": "Colour"
+    },
+    {
+      "index": 24,
+      "name": "DataType"
+    },
+    {
+      "index": 25,
+      "name": "UseFlipped"
+    },
+    {
+      "index": 26,
+      "name": "IGDBName"
+    },
+    {
+      "index": 27,
+      "name": "SpectralData"
+    }
+  ],
+  "repeated_field_groups": [],
+  "records_at_capture": [
+    {
+      "Id": "10000",
+      "Name": "Sample of Generic CLEAR 6MM",
+      "CategoryId": "1",
+      "Thickness": "6",
+      "Conductivity": ".9"
+    }
+  ],
+  "field_observations": [
+    {
+      "field": "Id",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "10000"
+      ]
+    },
+    {
+      "field": "Name",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "Sample of Generic CLEAR 6MM"
+      ]
+    },
+    {
+      "field": "CategoryId",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "1"
+      ]
+    },
+    {
+      "field": "SourceId",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "3"
+      ]
+    },
+    {
+      "field": "Thickness",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "6"
+      ]
+    },
+    {
+      "field": "SolarTransmittance",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".775"
+      ]
+    },
+    {
+      "field": "FrontSolarReflectance",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".071"
+      ]
+    },
+    {
+      "field": "BackSolarReflectance",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".071"
+      ]
+    },
+    {
+      "field": "VisibleTransmittance",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".881"
+      ]
+    },
+    {
+      "field": "FrontVisibleReflectance",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".08"
+      ]
+    },
+    {
+      "field": "BackVisibleReflectance",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".08"
+      ]
+    },
+    {
+      "field": "InfraRedTransmittance",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "FrontInfraRedReflectance",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".84"
+      ]
+    },
+    {
+      "field": "BackInfraRedReflectance",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".84"
+      ]
+    },
+    {
+      "field": "Conductivity",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".9"
+      ]
+    },
+    {
+      "field": "RegionId",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "315"
+      ]
+    },
+    {
+      "field": "Source",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "EnergyPlus dataset"
+      ]
+    },
+    {
+      "field": "Locked",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "Scratch",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "IsSystem",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "Description",
+      "non_empty_records": 0,
+      "unique_value_count": 1,
+      "sample_values": [
+        ""
+      ]
+    },
+    {
+      "field": "NFRCID",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "-1"
+      ]
+    },
+    {
+      "field": "Colour",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "DataType",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "1-Broadband"
+      ]
+    },
+    {
+      "field": "UseFlipped",
+      "non_empty_records": 0,
+      "unique_value_count": 1,
+      "sample_values": [
+        ""
+      ]
+    },
+    {
+      "field": "IGDBName",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "N/A"
+      ]
+    },
+    {
+      "field": "SpectralData",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "-"
+      ]
+    }
+  ],
+  "generation_guidance": {
+    "internal_ddf_entry_name": "Panes.cdt",
+    "preserve_category_ids_line": true,
+    "preserve_header_order": true,
+    "required_record_field_count": 27,
+    "do_not_generate_before_mapping_is_locked": false
+  },
+  "external_reference_notes": [
+    "DesignBuilder support describes DDF as a ZIP archive containing separate CDT tables, including Glazing, Panes, and Window Gas.",
+    "DesignBuilder glazing layer data says material-layer glazing uses panes interspersed with window gas layers.",
+    "DesignBuilder export guidance says referenced user components should be included with exported data."
+  ],
+  "external_references": [
+    {
+      "title": "DesignBuilder Support - Working with DDF Files in Excel",
+      "url": "https://support.designbuilder.co.uk/support/solutions/articles/103000396938-working-with-ddf-files-in-excel"
+    },
+    {
+      "title": "DesignBuilder Help - Glazing layer data",
+      "url": "https://designbuilder.co.uk/helpv7.0/Content/_Glazing_layer_data.htm"
+    },
+    {
+      "title": "DesignBuilder Help - Import Components/Templates",
+      "url": "https://designbuilder.co.uk/helpv7.0/Content/Import_Components.htm"
+    },
+    {
+      "title": "DesignBuilder Help - Export Components/Templates",
+      "url": "https://designbuilder.co.uk/helpv7.0/Content/Export_Components_Templates1.htm"
+    }
+  ],
+  "notes": [
+    "This schema is captured from the current local Sample_Glazing.DDF entry Panes.cdt.",
+    "Treat this sample as the current local truth until another DesignBuilder export replaces it."
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "workspace_name": "IBST_Glazing_Test",
+  "scope": {
+    "purpose": "Analyse and standardise the workflow for importing external glazing data into DesignBuilder.",
+    "domain": "DesignBuilder glazing imported from external data sources"
+  },
+  "rule_source": {
+    "rules_md_is_human_readable_source": true,
+    "workspace_rules_json_is_machine_readable_source": true,
+    "rules_update_requires_json_update": true,
+    "rule_change_incomplete_without_both_files_updated": true
+  },
+  "paths": {
+    "reference": "01_designbuilder_format",
+    "input": "02_csv_input",
+    "output": "03_output",
+    "scripts": "04_scripts",
+    "archive": "99_archive"
+  },
+  "path_rules": {
+    "reference_is_read_only_by_default": true,
+    "input_is_for_external_data_transformation": true,
+    "output_is_only_for_pipeline_generated_files": true,
+    "scripts_is_only_for_workspace_automation": true,
+    "archive_is_for_removed_files_before_permanent_deletion": true
+  },
+  "reference_files": {
+    "reference_ddf": "Sample_Glazing.DDF",
+    "reference_exported_cdt": "Glazing_exported_reference.cdt",
+    "reference_exported_schema": "Glazing_exported_reference_schema.json",
+    "glazing_reference_exported_cdt": "Glazing_exported_reference.cdt",
+    "glazing_reference_exported_schema": "Glazing_exported_reference_schema.json",
+    "panes_reference_exported_cdt": "Panes_exported_reference.cdt",
+    "panes_reference_exported_schema": "Panes_exported_reference_schema.json",
+    "window_gas_reference_exported_cdt": "WindowGas_exported_reference.cdt",
+    "window_gas_reference_exported_schema": "WindowGas_exported_reference_schema.json"
+  },
+  "input_files": {
+    "discovery_mode": "scan_all_matching_csv_in_input_folder",
+    "schema_subfolder": "schema",
+    "input_schema_file": "schema/glazing_input_schema.csv",
+    "input_schema_files": {
+      "glazing": "schema/glazing_input_schema.csv",
+      "panes": "schema/panes_input_schema.csv",
+      "window_gas": "schema/window_gas_input_schema.csv"
+    },
+    "file_extension": ".csv",
+    "ignore_filename_prefixes": [
+      "_"
+    ],
+    "sort_order": "filename_ascending",
+    "allow_multiple_files": true
+  },
+  "artifacts": {
+    "final_import_artifact": ".ddf",
+    "editable_intermediate_artifact": ".cdt",
+    "csv_is_not_final_import_artifact": true,
+    "allowed_output_files": [
+      "Glazing_generated.cdt",
+      "Panes_generated.cdt",
+      "Glazing_generated.ddf"
+    ]
+  },
+  "behavior": {
+    "allow_manual_new_files": false,
+    "new_files_require_explicit_create_instruction_or_defined_pipeline_output": true,
+    "archive_before_delete": true,
+    "csv_is_final_artifact": false,
+    "ddf_is_final_artifact": true,
+    "cdt_is_editable_intermediate": true,
+    "default_operation_is_repair_not_create": true,
+    "manual_creation_of_cdt_or_ddf_without_defined_generation_step": false,
+    "move_irrelevant_files_to_archive_before_final_delete": true
+  },
+  "ddf_cdt": {
+    "ddf_is_designbuilder_import_export_package": true,
+    "designbuilder_reads_ddf_directly_for_import": true,
+    "ddf_can_be_renamed_to_zip_for_inspection": true,
+    "ddf_is_not_directly_editable_text": true,
+    "cdt_is_text_inside_ddf_package": true,
+    "cdt_field_delimiter": "#",
+    "reference_package_cdt_entry_name": "Glazing.cdt",
+    "reference_package_panes_entry_name": "Panes.cdt",
+    "reference_package_window_gas_entry_name": "WindowGas.cdt",
+    "package_entry_name_must_match_reference_ddf": true,
+    "edit_external_data_on_cdt_then_repackage_to_ddf": true,
+    "package_ddf_by_zipping_required_cdt_files_then_renaming_extension": true,
+    "must_compare_with_designbuilder_exported_reference_before_packaging": true
+  },
+  "glazing": {
+    "is_component_data": true,
+    "requires_designbuilder_exported_reference": true,
+    "must_lock_mapping_after_real_reference_capture": true,
+    "allow_generator_before_reference_capture": false,
+    "reference_cdt_encoding": "windows-1252",
+    "reference_field_count": 135,
+    "reference_record_count": 4,
+    "panes_reference_field_count": 27,
+    "panes_reference_record_count": 1,
+    "window_gas_reference_field_count": 29,
+    "window_gas_reference_record_count": 1,
+    "notes": [
+      "Do not infer glazing CSV schema before analysing a real DesignBuilder Glazing.cdt export.",
+      "The expected internal CDT entry name is Glazing.cdt.",
+      "The current reference DDF also contains Panes.cdt and WindowGas.cdt companion tables.",
+      "For material-layer glazing, odd Mat slots are pane references and even Mat slots are window gas references."
+    ]
+  },
+  "reference_tables": {
+    "glazing": {
+      "entry_name": "Glazing.cdt",
+      "exported_cdt": "Glazing_exported_reference.cdt",
+      "schema": "Glazing_exported_reference_schema.json",
+      "field_count": 135,
+      "record_count": 4
+    },
+    "panes": {
+      "entry_name": "Panes.cdt",
+      "exported_cdt": "Panes_exported_reference.cdt",
+      "schema": "Panes_exported_reference_schema.json",
+      "field_count": 27,
+      "record_count": 1
+    },
+    "window_gas": {
+      "entry_name": "WindowGas.cdt",
+      "exported_cdt": "WindowGas_exported_reference.cdt",
+      "schema": "WindowGas_exported_reference_schema.json",
+      "field_count": 29,
+      "record_count": 1
+    }
+  },
+  "future_pipeline": {
+    "reference_capture_complete": true,
+    "mapping_rules_complete": false,
+    "generator_implemented": true,
+    "package_generator_implemented": true,
+    "current_supported_modes": [
+      "generate-ddf"
+    ]
+  },
+  "maintenance_convention": {
+    "sync_rules_md_with_config": true,
+    "note": "Each time RULES.md is updated, this config file must be updated in the same change."
+  }
+}

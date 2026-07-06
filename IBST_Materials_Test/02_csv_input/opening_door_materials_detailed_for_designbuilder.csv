@@ -1,0 +1,5 @@
+﻿Name,Type,Roughness,DefaultThickness_m,Conductivity_W_mK,Density_kg_m3,SpecificHeat_J_kgK,ThermalAbsorptance,SolarAbsorptance,VisibleAbsorptance,ForceThickness,Notes
+STEEL_SHEET_0012,Detailed,Smooth,0.0012,50,7850,500,0.9,0.7,0.7,Yes,Steel sheet 1.2 mm for main/technical steel door leaf outer and inner layers
+FIRE_DOOR_CORE_045,Detailed,MediumRough,0.045,0.045,120,840,0.9,0.5,0.5,Yes,Proxy insulated/fire door core 45 mm for main/technical steel door
+MDF_HDF_DOOR_LEAF_035,Detailed,MediumSmooth,0.035,0.135,800,1300,0.9,0.7,0.7,Yes,Representative MDF/HDF 35 mm door leaf for bedroom/internal apartment doors
+UPVC_DOOR_PANEL_024,Detailed,Smooth,0.024,0.17,1400,1000,0.9,0.65,0.65,Yes,Representative uPVC/plastic 24 mm door panel for WC/wet room door

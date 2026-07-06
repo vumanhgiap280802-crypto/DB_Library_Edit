@@ -1,0 +1,24 @@
+column_name,required,data_type,allowed_values,cdt_field,default_value_or_rule,notes
+pane_name,yes,string,,Name,,Unique pane component name. Trim whitespace. Must not contain # because CDT uses # as delimiter.
+category_id,yes,integer,1 initially observed,CategoryId,,Use DesignBuilder Pane category id from reference. Current sample uses 1.
+source_id,no,integer,,SourceId,Seed value,SourceId from DesignBuilder pane data source if known.
+thickness,yes,decimal_positive,,Thickness,,Pane thickness from source data. Current sample unit appears mm.
+solar_transmittance,yes,decimal_0_1,,SolarTransmittance,,Solar transmittance value for pane.
+front_solar_reflectance,yes,decimal_0_1,,FrontSolarReflectance,,Front solar reflectance.
+back_solar_reflectance,yes,decimal_0_1,,BackSolarReflectance,,Back solar reflectance.
+visible_transmittance,yes,decimal_0_1,,VisibleTransmittance,,Visible transmittance value.
+front_visible_reflectance,yes,decimal_0_1,,FrontVisibleReflectance,,Front visible reflectance.
+back_visible_reflectance,yes,decimal_0_1,,BackVisibleReflectance,,Back visible reflectance.
+infrared_transmittance,no,decimal_0_1,,InfraRedTransmittance,Seed value,Infrared transmittance if known. Use seed/default when not available.
+front_infrared_reflectance,no,decimal_0_1,,FrontInfraRedReflectance,Seed value,Front infrared reflectance if known.
+back_infrared_reflectance,no,decimal_0_1,,BackInfraRedReflectance,Seed value,Back infrared reflectance if known.
+conductivity,yes,decimal_positive,,Conductivity,,Pane conductivity value.
+region_id,no,integer,,RegionId,315 from sample seed,Use seed/default unless a clear regional rule is defined.
+source,no,string,,Source,User input or seed value,Source text for pane data.
+description,no,string,,Description,,Optional pane description. Replace # with space before writing CDT.
+nfrc_id,no,integer,,NFRCID,-1 from sample seed,NFRC id when available.
+colour,no,integer,,Colour,Seed value,DesignBuilder colour integer used for visualisation.
+data_type,no,enum,1-Broadband,DataType,1-Broadband,Current sample uses broadband data. Spectral workflow needs separate mapping.
+use_flipped,no,boolean_0_1,0;1,UseFlipped,Seed value,Use flipped optical data only after validation.
+igdb_name,no,string,,IGDBName,N/A from sample seed,IGDB name when available.
+spectral_data,no,string,,SpectralData,- from sample seed,Spectral data reference. Keep seed unless spectral workflow is confirmed.

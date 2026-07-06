@@ -1,0 +1,49 @@
+column_name,required,data_type,allowed_values,cdt_field,default_value_or_rule,notes
+glazing_name,yes,string,,Name,,Unique glazing component name. Trim whitespace. Must not contain # because CDT uses # as delimiter.
+category_id,yes,integer,"1,2,3 initially observed",CategoryId,,Use DesignBuilder category id from Glazing reference. Current sample records use 1 single, 2 double, 3 triple; add more only after new reference confirms them.
+definition_method,yes,enum,"1-Material layers;2-Simple",DefinitionMethod,1-Material layers,Current sample contains both methods. Generator currently supports only 1-Material layers; 2-Simple needs separate mapping before use.
+source,no,string,,Source,User input or seed value,Source text for glazing data.
+region_id,no,integer,,RegionId,315 from sample seed,Use seed/default unless a clear regional rule is defined.
+description,no,string,,Description,,Optional glazing description. Replace # with space before writing CDT.
+colour,no,integer,,Colour,Seed value,DesignBuilder colour integer used for visualisation.
+layers,yes_if_material_layers,integer,1..4 inferred from Mat 1..7,Layers,,Number of glazing pane layers. Material-layer glazing uses pane and window gas slots interleaved.
+u_value,no,decimal_positive,,U-Value,Seed or calculated value,Overall glazing U-value. Required for 2-Simple mapping when that workflow is confirmed.
+visible_transmittance,no,decimal_0_1,,TransLight,Seed or calculated value,Visible transmittance VT or equivalent TransLight value.
+solar_transmittance_or_shgc,no,decimal_0_1,,TransSolar,Seed or calculated value,For 2-Simple DesignBuilder refers to SHGC; confirm exact CDT mapping before generation.
+direct_solar_transmittance,no,decimal_0_1,,TransDirectSolar,Seed or calculated value,Direct solar transmittance if known.
+mat_1_ref,yes_if_material_layers,string_or_integer,,Mat 1,,Pane reference for slot 1. Use numeric DesignBuilder id or an exact Pane Name available in Panes_exported_reference.cdt.
+mat_2_ref,required_when_layers_ge_2,string_or_integer,,Mat 2,Seed inactive slot value,Window gas reference between pane 1 and pane 2. Use numeric DesignBuilder id or exact WindowGas Name available in WindowGas_exported_reference.cdt.
+mat_3_ref,required_when_layers_ge_2,string_or_integer,,Mat 3,Seed inactive slot value,Pane reference for pane 2. Use numeric DesignBuilder id or exact Pane Name available in Panes_exported_reference.cdt.
+mat_4_ref,required_when_layers_ge_3,string_or_integer,,Mat 4,Seed inactive slot value,Window gas reference between pane 2 and pane 3. Use numeric DesignBuilder id or exact WindowGas Name available in WindowGas_exported_reference.cdt.
+mat_5_ref,required_when_layers_ge_3,string_or_integer,,Mat 5,Seed inactive slot value,Pane reference for pane 3. Use numeric DesignBuilder id or exact Pane Name available in Panes_exported_reference.cdt.
+mat_6_ref,required_when_layers_ge_4,string_or_integer,,Mat 6,Seed inactive slot value,Window gas reference between pane 3 and pane 4. Use numeric DesignBuilder id or exact WindowGas Name available in WindowGas_exported_reference.cdt.
+mat_7_ref,required_when_layers_ge_4,string_or_integer,,Mat 7,Seed inactive slot value,Pane reference for pane 4. Use numeric DesignBuilder id or exact Pane Name available in Panes_exported_reference.cdt.
+flip_1,no,boolean_0_1,0;1,Flip 1,0,Reverse direction of slot 1 if needed.
+flip_2,no,boolean_0_1,0;1,Flip 2,0,Reverse direction of slot 2 if needed.
+flip_3,no,boolean_0_1,0;1,Flip 3,0,Reverse direction of slot 3 if needed.
+flip_4,no,boolean_0_1,0;1,Flip 4,0,Reverse direction of slot 4 if needed.
+flip_5,no,boolean_0_1,0;1,Flip 5,0,Reverse direction of slot 5 if needed.
+flip_6,no,boolean_0_1,0;1,Flip 6,0,Reverse direction of slot 6 if needed.
+flip_7,no,boolean_0_1,0;1,Flip 7,0,Reverse direction of slot 7 if needed.
+matdef_1,no,enum,"1-Pane;2-Pane group",MatDef 1,1-Pane,Used for thermochromic/pane-group cases. Keep 1-Pane unless a rule says otherwise.
+altmat_1,no,string_or_integer,,AltMat 1,Seed value,Alternative material/pane group reference for slot 1 if applicable.
+matdef_3,no,enum,"1-Pane;2-Pane group",MatDef 3,1-Pane,Used for thermochromic/pane-group cases. Keep 1-Pane unless a rule says otherwise.
+altmat_3,no,string_or_integer,,AltMat 3,Seed value,Alternative material/pane group reference for slot 3 if applicable.
+matdef_5,no,enum,"1-Pane;2-Pane group",MatDef 5,1-Pane,Used for thermochromic/pane-group cases. Keep 1-Pane unless a rule says otherwise.
+altmat_5,no,string_or_integer,,AltMat 5,Seed value,Alternative material/pane group reference for slot 5 if applicable.
+matdef_7,no,enum,"1-Pane;2-Pane group",MatDef 7,1-Pane,Used for thermochromic/pane-group cases. Keep 1-Pane unless a rule says otherwise.
+altmat_7,no,string_or_integer,,AltMat 7,Seed value,Alternative material/pane group reference for slot 7 if applicable.
+frame_fraction,no,decimal_0_1,,FrameFraction,Seed value,Optional frame fraction if glazing object should carry frame-related data.
+cost_per_area,no,decimal_nonnegative,,CostPerArea,Seed value,Optional cost value.
+is_display_window,no,boolean_0_1,0;1,IsDisplayWindow,0,Set only if the glazing should be treated as display window data.
+hide_in_lists,no,boolean_0_1,0;1,HideInLists,Seed value,Usually keep seed/default.
+is_diffusing,no,boolean_0_1,0;1,IsDiffusing,0,Radiance daylighting diffusing glazing flag.
+diffuse_fraction,no,decimal_0_1,,DiffuseFraction,Seed value,Fraction of transmitted light diffused when is_diffusing is 1.
+using_enhanced_surface_coeffs,no,boolean_0_1,0;1,UsingEnhancedSurfaceCoeffs,0,Use enhanced surface coefficients only after validation.
+hci,no,decimal_nonnegative,,HCI,Seed value,Inside convective coefficient if enhanced coefficients are used.
+radi,no,decimal_nonnegative,,RadI,Seed value,Inside radiative coefficient if enhanced coefficients are used.
+sri,no,decimal_nonnegative,,SRI,Seed value,Inside surface resistance/coefficient field from CDT.
+hco,no,decimal_nonnegative,,HCO,Seed value,Outside convective coefficient if enhanced coefficients are used.
+rado,no,decimal_nonnegative,,RadO,Seed value,Outside radiative coefficient if enhanced coefficients are used.
+sro,no,decimal_nonnegative,,SRO,Seed value,Outside surface resistance/coefficient field from CDT.
+notes,no,string,,not_direct_cdt_field,,Free note for input review only. Do not write directly to CDT unless a future rule maps it.

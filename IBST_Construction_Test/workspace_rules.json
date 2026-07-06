@@ -1,0 +1,169 @@
+{
+  "workspace_name": "IBST_Construction_Test",
+  "scope": {
+    "purpose": "Analyse and standardise the workflow for importing external construction data into DesignBuilder.",
+    "domain": "DesignBuilder constructions imported from external data sources"
+  },
+  "rule_source": {
+    "rules_md_is_human_readable_source": true,
+    "workspace_rules_json_is_machine_readable_source": true,
+    "rules_update_requires_json_update": true,
+    "rule_change_incomplete_without_both_files_updated": true
+  },
+  "paths": {
+    "reference": "01_designbuilder_format",
+    "input": "02_csv_input",
+    "output": "03_output",
+    "scripts": "04_scripts",
+    "archive": "99_archive"
+  },
+  "path_rules": {
+    "reference_is_read_only_by_default": true,
+    "input_is_for_external_data_transformation": true,
+    "output_is_only_for_pipeline_generated_files": true,
+    "scripts_is_only_for_workspace_automation": true,
+    "archive_is_for_removed_files_before_permanent_deletion": true
+  },
+  "reference_files": {
+    "reference_ddf": "Construction sample.DDF",
+    "reference_exported_cdt": "Constructions_exported_reference.cdt",
+    "reference_exported_schema": "Constructions_exported_reference_schema.json"
+  },
+  "input_files": {
+    "discovery_mode": "scan_all_matching_csv_in_input_folder",
+    "file_extension": ".csv",
+    "ignore_filename_prefixes": [
+      "_"
+    ],
+    "sort_order": "filename_ascending",
+    "allow_multiple_files": true
+  },
+  "construction_csv_mapping": {
+    "layout": "long_by_layer",
+    "required_columns": [
+      "construction_code",
+      "construction_name",
+      "category",
+      "layer_order",
+      "material_name",
+      "thickness_override_m",
+      "notes"
+    ],
+    "group_by_columns": [
+      "construction_code",
+      "construction_name",
+      "category"
+    ],
+    "sort_by_column": "layer_order",
+    "name_column": "construction_name",
+    "code_column": "construction_code",
+    "category_column": "category",
+    "material_name_column": "material_name",
+    "thickness_override_column": "thickness_override_m",
+    "notes_column": "notes",
+    "category_text_to_id": {
+      "External Wall": "1",
+      "Internal Partition": "2",
+      "Ground Floor": "12",
+      "Door": "9"
+    },
+    "definition_method_fixed_value": "1-Layers",
+    "number_layers_from_group_size": true,
+    "thickness_from_sum_of_layer_thicknesses": true,
+    "description_from_first_non_empty_note": true,
+    "seed_records_by_category": {
+      "External Wall": "IBST_SA_EXTWALL_BRICK_EPS50",
+      "Internal Partition": "IBST_SB_PART_FC_REFL_MW_GYP",
+      "Ground Floor": "IBST_SC_GROUNDFLOOR_XPS_CONC_TILE",
+      "Door": "IBST_SA_EXTWALL_BRICK_EPS50"
+    },
+    "material_lookup": {
+      "id_priority": [
+        "../IBST_Materials_Test/03_output/*/Materials_generated.cdt",
+        "../IBST_Materials_Test/01_designbuilder_format/Materials_FULL_FINAL_QA.cdt",
+        "01_designbuilder_format/Construction sample.DDF::Materials.cdt"
+      ],
+      "default_thickness_priority": [
+        "../IBST_Materials_Test/01_designbuilder_format/Materials_FULL_FINAL_QA.cdt",
+        "../IBST_Materials_Test/03_output/*/Materials_generated.cdt",
+        "../IBST_Materials_Test/02_csv_input/materials_detailed.csv",
+        "../IBST_Materials_Test/02_csv_input/designbuilder_materials_10_excluding_uploaded.csv",
+        "../IBST_Materials_Test/02_csv_input/materials_nomass.csv"
+      ]
+    }
+  },
+  "artifacts": {
+    "final_import_artifact": ".ddf",
+    "editable_intermediate_artifact": ".cdt",
+    "csv_is_not_final_import_artifact": true,
+    "per_run_output_must_use_new_subfolder": false,
+    "output_subfolder_name_source": "input_data_name_stable_for_same_request_replace",
+    "output_subfolder_must_prevent_overwrite_between_runs": false,
+    "allowed_output_files": [
+      "Constructions_generated.cdt",
+      "Constructions_generated.ddf"
+    ]
+  },
+  "behavior": {
+    "allow_manual_new_files": false,
+    "new_files_require_explicit_create_instruction_or_defined_pipeline_output": true,
+    "archive_before_delete": true,
+    "csv_is_final_artifact": false,
+    "ddf_is_final_artifact": true,
+    "cdt_is_editable_intermediate": true,
+    "default_operation_is_repair_not_create": true,
+    "manual_creation_of_cdt_or_ddf_without_defined_generation_step": false,
+    "move_irrelevant_files_to_archive_before_final_delete": true
+  },
+  "ddf_cdt": {
+    "ddf_is_designbuilder_import_export_package": true,
+    "designbuilder_reads_ddf_directly_for_import": true,
+    "ddf_can_be_renamed_to_zip_for_inspection": true,
+    "ddf_is_not_directly_editable_text": true,
+    "cdt_is_text_inside_ddf_package": true,
+    "cdt_field_delimiter": "#",
+    "cdt_expected_sections": [
+      "category_ids_line",
+      "header_line",
+      "record_lines"
+    ],
+    "reference_package_cdt_entry_name": "Constructions.cdt",
+    "reference_package_materials_entry_name": "Materials.cdt",
+    "package_entry_name_must_match_reference_ddf": true,
+    "edit_external_data_on_cdt_then_repackage_to_ddf": true,
+    "package_ddf_by_zipping_required_cdt_files_then_renaming_extension": true,
+    "designbuilder_exported_csv_cannot_be_imported_back_directly": true,
+    "must_compare_with_designbuilder_exported_reference_before_packaging": true
+  },
+  "constructions": {
+    "is_component_data": true,
+    "requires_designbuilder_exported_reference": true,
+    "depends_on_material_references": true,
+    "must_lock_mapping_after_real_reference_capture": true,
+    "allow_generator_before_reference_capture": false,
+    "notes": [
+      "The current reference DDF is stored as Construction sample.DDF in 01_designbuilder_format.",
+      "Extract Constructions.cdt from that DDF before defining any mapping or generator logic.",
+      "Do not invent CSV schema or seed records before analysing real DesignBuilder construction exports."
+    ]
+  },
+  "future_pipeline": {
+    "reference_capture_complete": true,
+    "mapping_rules_complete": true,
+    "generator_implemented": true,
+    "package_generator_implemented": true,
+    "current_supported_modes": [
+      "summary",
+      "extract-reference",
+      "analyse-schema",
+      "analyse-input",
+      "generate-cdt",
+      "generate-ddf",
+      "preflight"
+    ]
+  },
+  "maintenance_convention": {
+    "sync_rules_md_with_config": true,
+    "note": "Each time RULES.md is updated, this config file must be updated in the same change."
+  }
+}

@@ -1,0 +1,14 @@
+column_name,required,data_type,allowed_values,cdt_field,default_value_or_rule,notes
+Name,yes,string,,Name,,Unique material name. Trim whitespace. Must not contain # because CDT uses # as delimiter.
+Type,yes,enum,Detailed;NoMass,Simple/Detailed,,Use Detailed for thermo-physical materials. Use NoMass for R-value-only materials.
+Roughness,yes,enum,VeryRough;Rough;MediumRough;MediumSmooth;Smooth;VerySmooth,Roughness,,Mapped to DesignBuilder roughness labels 1-Very rough through 6-Very smooth.
+DefaultThickness_m,required_for_Detailed,decimal_positive,,DefaultThickness,,Detailed only. Required when ForceThickness is true.
+Conductivity_W_mK,required_for_Detailed,decimal_positive,,Conductivity (W/mK),,Detailed only.
+Density_kg_m3,required_for_Detailed,decimal_positive,,Density (kg/m3),,Detailed only.
+SpecificHeat_J_kgK,required_for_Detailed,decimal_positive,,Capacity (J/kgK),,Detailed only.
+ThermalResistance_m2K_W,required_for_NoMass,decimal_positive,,R-Value,,NoMass only.
+ThermalAbsorptance,yes,decimal_0_to_1,,ThermalAbsorptance,,Surface thermal absorptance.
+SolarAbsorptance,yes,decimal_0_to_1,,SolarAbsorptance,,Surface solar absorptance.
+VisibleAbsorptance,yes,decimal_0_to_1,,VisibleAbsorptance,,Surface visible absorptance.
+ForceThickness,required_for_Detailed,enum,Yes;No;True;False;1;0,ForceThickness,0 for NoMass,Detailed only. Yes True or 1 forces DefaultThickness_m to be positive.
+Notes,no,string,,Description,,Copied to DesignBuilder Description. # is replaced by space before CDT generation.

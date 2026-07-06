@@ -1,0 +1,3 @@
+#78 #79 #80 #81 #82 #83 #546 #1015 
+#Id #Name #CategoryId #Thickness #GasDefinition #ConductivityCoefficientA #ConductivityCoefficientB #ConductivityCoefficientC #ViscosityCoefficientA #ViscosityCoefficientB #ViscosityCoefficientC #SpecificHeatCoefficientA #SpecificHeatCoefficientB #SpecificHeatCoefficientC #MolecularWeight #SpecificHeatRatio #IsAir #FractionAir #IsArgon #FractionArgon #IsKrypton #FractionKrypton #IsXenon #FractionXenon #IsCustom #Source #Description #Locked #Scratch 
+#10000  #Sample of AIR 6MM  #1  #6  #1-Single Gas  #.002873  #.0000776  #0  #.000003723  #.0000000494  #0  #1002.74  #.012324  #0  #28.97  #1.5  #1  #1  #0  #.001  #0  #.001  #0  #.001  #0  #BS EN 673 / E+  #  #0  #0    

@@ -1,0 +1,27 @@
+column_name,required,data_type,allowed_values,cdt_field,default_value_or_rule,notes
+window_gas_name,yes,string,,Name,,Unique window gas component name. Trim whitespace. Must not contain # because CDT uses # as delimiter.
+category_id,yes,integer,1 initially observed,CategoryId,,Use DesignBuilder WindowGas category id from reference. Current sample uses 1.
+thickness,yes,decimal_positive,,Thickness,,Gas gap thickness from source data. Current sample unit appears mm.
+gas_definition,yes,enum,1-Single Gas,GasDefinition,1-Single Gas,Current sample uses single gas. Mixture workflow needs separate mapping.
+conductivity_coefficient_a,required_for_custom_gas,decimal,,ConductivityCoefficientA,Seed value,Conductivity coefficient A.
+conductivity_coefficient_b,required_for_custom_gas,decimal,,ConductivityCoefficientB,Seed value,Conductivity coefficient B.
+conductivity_coefficient_c,required_for_custom_gas,decimal,,ConductivityCoefficientC,Seed value,Conductivity coefficient C.
+viscosity_coefficient_a,required_for_custom_gas,decimal,,ViscosityCoefficientA,Seed value,Viscosity coefficient A.
+viscosity_coefficient_b,required_for_custom_gas,decimal,,ViscosityCoefficientB,Seed value,Viscosity coefficient B.
+viscosity_coefficient_c,required_for_custom_gas,decimal,,ViscosityCoefficientC,Seed value,Viscosity coefficient C.
+specific_heat_coefficient_a,required_for_custom_gas,decimal,,SpecificHeatCoefficientA,Seed value,Specific heat coefficient A.
+specific_heat_coefficient_b,required_for_custom_gas,decimal,,SpecificHeatCoefficientB,Seed value,Specific heat coefficient B.
+specific_heat_coefficient_c,required_for_custom_gas,decimal,,SpecificHeatCoefficientC,Seed value,Specific heat coefficient C.
+molecular_weight,required_for_custom_gas,decimal_positive,,MolecularWeight,Seed value,Molecular weight.
+specific_heat_ratio,required_for_custom_gas,decimal_positive,,SpecificHeatRatio,Seed value,Specific heat ratio.
+is_air,no,boolean_0_1,0;1,IsAir,Seed value,Set 1 when gas is air.
+fraction_air,no,decimal_0_1,,FractionAir,Seed value,Air fraction.
+is_argon,no,boolean_0_1,0;1,IsArgon,Seed value,Set 1 when gas includes argon.
+fraction_argon,no,decimal_0_1,,FractionArgon,Seed value,Argon fraction.
+is_krypton,no,boolean_0_1,0;1,IsKrypton,Seed value,Set 1 when gas includes krypton.
+fraction_krypton,no,decimal_0_1,,FractionKrypton,Seed value,Krypton fraction.
+is_xenon,no,boolean_0_1,0;1,IsXenon,Seed value,Set 1 when gas includes xenon.
+fraction_xenon,no,decimal_0_1,,FractionXenon,Seed value,Xenon fraction.
+is_custom,no,boolean_0_1,0;1,IsCustom,0,Set 1 for custom gas only after mapping is confirmed.
+source,no,string,,Source,User input or seed value,Source text for gas data.
+description,no,string,,Description,,Optional gas description. Replace # with space before writing CDT.

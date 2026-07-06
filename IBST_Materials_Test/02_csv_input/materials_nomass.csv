@@ -1,0 +1,6 @@
+Name,Type,Roughness,ThermalResistance_m2K_W,ThermalAbsorptance,SolarAbsorptance,VisibleAbsorptance,Notes
+IBST_AIR_GAP_STD_R0P15,NoMass,Smooth,0.15,0.90,0.75,0.75,Khe khong khi tieu chuan
+IBST_AIR_GAP_LOW_R0P10,NoMass,Smooth,0.10,0.90,0.75,0.75,Khe khong khi nho
+IBST_AIR_GAP_HIGH_R0P18,NoMass,Smooth,0.18,0.90,0.75,0.75,Khe khong khi lon
+IBST_REFLECTIVE_LAYER_R0P30,NoMass,Smooth,0.30,0.90,0.30,0.30,Lop phan xa quy doi
+IBST_THIN_INSUL_EQ_R0P50,NoMass,Smooth,0.50,0.90,0.50,0.50,Lop cach nhiet quy doi

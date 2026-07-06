@@ -1,0 +1,213 @@
+{
+  "workspace_name": "IBST_Materials_Test",
+  "scope": {
+    "purpose": "Analyse and standardise the workflow for importing external material data into DesignBuilder.",
+    "domain": "DesignBuilder materials imported from external data sources"
+  },
+  "rule_source": {
+    "rules_md_is_human_readable_source": true,
+    "workspace_rules_json_is_machine_readable_source": true,
+    "rules_update_requires_json_update": true,
+    "rule_change_incomplete_without_both_files_updated": true
+  },
+  "paths": {
+    "reference": "01_designbuilder_format",
+    "input": "02_csv_input",
+    "output": "03_output",
+    "scripts": "04_scripts",
+    "archive": "99_archive"
+  },
+  "path_rules": {
+    "reference_is_read_only_by_default": true,
+    "input_is_for_external_data_transformation": true,
+    "output_is_only_for_pipeline_generated_files": true,
+    "scripts_is_only_for_workspace_automation": true,
+    "archive_is_for_removed_files_before_permanent_deletion": true
+  },
+  "reference_files": {
+    "reference_ddf": "Materials.DDF",
+    "reference_exported_cdt": "Materials_exported_reference.cdt",
+    "reference_final_qa_cdt": "Materials_FULL_FINAL_QA.cdt",
+    "reference_final_qa_ddf": "Materials_FULL_FINAL_QA.ddf",
+    "reference_final_qa_schema": "Materials_FULL_FINAL_QA_schema.json"
+  },
+  "input_files": {
+    "discovery_mode": "scan_all_matching_csv_in_input_folder",
+    "file_extension": ".csv",
+    "ignore_filename_prefixes": [
+      "_"
+    ],
+    "sort_order": "filename_ascending",
+    "allow_multiple_files_per_kind": true,
+    "type_column": "Type",
+    "detailed_type_value": "Detailed",
+    "nomass_type_value": "NoMass",
+    "detailed_required_columns": [
+      "Name",
+      "Type",
+      "Roughness",
+      "DefaultThickness_m",
+      "Conductivity_W_mK",
+      "Density_kg_m3",
+      "SpecificHeat_J_kgK",
+      "ThermalAbsorptance",
+      "SolarAbsorptance",
+      "VisibleAbsorptance",
+      "ForceThickness",
+      "Notes"
+    ],
+    "nomass_required_columns": [
+      "Name",
+      "Type",
+      "Roughness",
+      "ThermalResistance_m2K_W",
+      "ThermalAbsorptance",
+      "SolarAbsorptance",
+      "VisibleAbsorptance",
+      "Notes"
+    ]
+  },
+  "artifacts": {
+    "final_import_artifact": ".ddf",
+    "editable_intermediate_artifact": ".cdt",
+    "csv_is_not_final_import_artifact": true,
+    "per_run_output_must_use_new_subfolder": true,
+    "output_subfolder_name_source": "input_data_name_with_optional_timestamp_suffix",
+    "output_subfolder_must_prevent_overwrite_between_runs": true,
+    "allowed_output_files": [
+      "Materials_generated.cdt",
+      "Materials_generated.ddf"
+    ]
+  },
+  "behavior": {
+    "allow_manual_new_files": false,
+    "new_files_require_explicit_create_instruction_or_defined_pipeline_output": true,
+    "archive_before_delete": true,
+    "csv_is_final_artifact": false,
+    "ddf_is_final_artifact": true,
+    "cdt_is_editable_intermediate": true,
+    "default_operation_is_repair_not_create": true,
+    "manual_creation_of_cdt_or_ddf_without_defined_generation_step": false,
+    "move_irrelevant_files_to_archive_before_final_delete": true
+  },
+  "ddf_cdt": {
+    "ddf_is_designbuilder_import_export_package": true,
+    "designbuilder_reads_ddf_directly_for_import": true,
+    "ddf_can_be_renamed_to_zip_for_inspection": true,
+    "ddf_is_not_directly_editable_text": true,
+    "cdt_is_text_inside_ddf_package": true,
+    "cdt_field_delimiter": "#",
+    "cdt_expected_sections": [
+      "category_ids_line",
+      "header_line",
+      "record_lines"
+    ],
+    "reference_package_cdt_entry_name": "Materials.cdt",
+    "package_entry_name_must_match_reference_ddf": true,
+    "edit_external_data_on_cdt_then_repackage_to_ddf": true,
+    "package_ddf_by_zipping_required_cdt_files_then_renaming_extension": true,
+    "designbuilder_exported_csv_cannot_be_imported_back_directly": true,
+    "must_compare_with_designbuilder_exported_reference_before_packaging": true
+  },
+  "materials": {
+    "is_component_data": true,
+    "can_be_referenced_by_other_components": true,
+    "reference_must_be_designbuilder_exported_materials_ddf": true,
+    "must_compare_against_exported_materials_ddf_or_cdt_before_generating_new_materials": true,
+    "data_groups": [
+      "general_thermo_physical",
+      "moisture_transfer",
+      "surface_properties",
+      "green_roof",
+      "embodied_carbon",
+      "phase_change"
+    ],
+    "import_to_open_model_targets_model_components": true,
+    "import_to_library_requires_no_open_model": true,
+    "component_added_while_model_is_open_becomes_model_component": true,
+    "new_materials_for_future_models_must_be_imported_to_library": true,
+    "system_materials_editable_directly": false,
+    "clone_system_material_before_edit": true,
+    "prefer_user_defined_materials_for_external_generation": true
+  },
+  "materials_mapping": {
+    "name_rule": {
+      "csv_source_column": "Name",
+      "cdt_field": "Name",
+      "trim_whitespace": true,
+      "forbidden_characters": [
+        "#"
+      ],
+      "allow_automatic_truncation": false,
+      "require_unique_after_normalization": true,
+      "legacy_shortened_names_are_rule_violations": true
+    },
+    "roughness_rule": {
+      "csv_source_column": "Roughness",
+      "cdt_field": "Roughness",
+      "allowed_csv_values": [
+        "VeryRough",
+        "Rough",
+        "MediumRough",
+        "MediumSmooth",
+        "Smooth",
+        "VerySmooth"
+      ],
+      "csv_to_cdt": {
+        "VeryRough": "1-Very rough",
+        "Rough": "2-Rough",
+        "MediumRough": "3-Medium rough",
+        "MediumSmooth": "4-Medium smooth",
+        "Smooth": "5-Smooth",
+        "VerySmooth": "6-Very smooth"
+      }
+    },
+    "description_rule": {
+      "csv_source_column": "Notes",
+      "cdt_field": "Description",
+      "copy_notes_to_description": true,
+      "trim_whitespace": true,
+      "replace_delimiter_with_space": true,
+      "collapse_internal_whitespace": true
+    },
+    "force_thickness_rule": {
+      "csv_source_column": "ForceThickness",
+      "cdt_field": "ForceThickness",
+      "detailed_truthy_values": [
+        "yes",
+        "true",
+        "1"
+      ],
+      "detailed_falsy_values": [
+        "no",
+        "false",
+        "0",
+        ""
+      ],
+      "nomass_default_value": "0",
+      "detailed_requires_positive_default_thickness_when_true": true
+    },
+    "id_generation_rule": {
+      "cdt_field": "Id",
+      "source": "generated_not_from_csv",
+      "strategy": "reference_max_plus_one",
+      "assignment_order": [
+        "detailed_csv_file_order",
+        "nomass_csv_file_order"
+      ],
+      "reuse_existing_ids": false
+    },
+    "seed_template_rule": {
+      "reference_cdt_file": "Materials_exported_reference.cdt",
+      "detailed_seed_name": "IBST_SEED_DETAILED_REAL",
+      "nomass_seed_name": "IBST_SEED_NOMASS_REAL",
+      "use_seed_only_for_unmapped_fields": true,
+      "rule_mapped_fields_always_override_seed_fields": true,
+      "prefer_designbuilder_exported_seed_over_legacy_generated_seed": true
+    }
+  },
+  "maintenance_convention": {
+    "sync_rules_md_with_config": true,
+    "note": "Each time RULES.md is updated, this config file must be updated in the same change."
+  }
+}

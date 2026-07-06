@@ -1,0 +1,471 @@
+{
+  "sample_file": "Sample_Glazing.DDF",
+  "internal_ddf_entry_name": "WindowGas.cdt",
+  "schema_type": "DesignBuilder WindowGas CDT reference schema",
+  "generated_from": "WindowGas_exported_reference.cdt",
+  "generated_at_local": "2026-06-03 13:39:20",
+  "source_encoding": "utf-8-sig",
+  "delimiter": "#",
+  "line_structure": [
+    {
+      "line_number": 1,
+      "role": "category_ids",
+      "count": 8
+    },
+    {
+      "line_number": 2,
+      "role": "header_fields",
+      "count": 29
+    },
+    {
+      "line_number": "3..end",
+      "role": "record_rows",
+      "count": 1
+    }
+  ],
+  "counts": {
+    "line_count_at_capture": 3,
+    "category_id_count": 8,
+    "field_count": 29,
+    "record_count_at_capture": 1,
+    "record_field_counts_unique": [
+      29
+    ]
+  },
+  "category_ids": [
+    "78",
+    "79",
+    "80",
+    "81",
+    "82",
+    "83",
+    "546",
+    "1015"
+  ],
+  "fields": [
+    "Id",
+    "Name",
+    "CategoryId",
+    "Thickness",
+    "GasDefinition",
+    "ConductivityCoefficientA",
+    "ConductivityCoefficientB",
+    "ConductivityCoefficientC",
+    "ViscosityCoefficientA",
+    "ViscosityCoefficientB",
+    "ViscosityCoefficientC",
+    "SpecificHeatCoefficientA",
+    "SpecificHeatCoefficientB",
+    "SpecificHeatCoefficientC",
+    "MolecularWeight",
+    "SpecificHeatRatio",
+    "IsAir",
+    "FractionAir",
+    "IsArgon",
+    "FractionArgon",
+    "IsKrypton",
+    "FractionKrypton",
+    "IsXenon",
+    "FractionXenon",
+    "IsCustom",
+    "Source",
+    "Description",
+    "Locked",
+    "Scratch"
+  ],
+  "field_details": [
+    {
+      "index": 1,
+      "name": "Id"
+    },
+    {
+      "index": 2,
+      "name": "Name"
+    },
+    {
+      "index": 3,
+      "name": "CategoryId"
+    },
+    {
+      "index": 4,
+      "name": "Thickness"
+    },
+    {
+      "index": 5,
+      "name": "GasDefinition"
+    },
+    {
+      "index": 6,
+      "name": "ConductivityCoefficientA"
+    },
+    {
+      "index": 7,
+      "name": "ConductivityCoefficientB"
+    },
+    {
+      "index": 8,
+      "name": "ConductivityCoefficientC"
+    },
+    {
+      "index": 9,
+      "name": "ViscosityCoefficientA"
+    },
+    {
+      "index": 10,
+      "name": "ViscosityCoefficientB"
+    },
+    {
+      "index": 11,
+      "name": "ViscosityCoefficientC"
+    },
+    {
+      "index": 12,
+      "name": "SpecificHeatCoefficientA"
+    },
+    {
+      "index": 13,
+      "name": "SpecificHeatCoefficientB"
+    },
+    {
+      "index": 14,
+      "name": "SpecificHeatCoefficientC"
+    },
+    {
+      "index": 15,
+      "name": "MolecularWeight"
+    },
+    {
+      "index": 16,
+      "name": "SpecificHeatRatio"
+    },
+    {
+      "index": 17,
+      "name": "IsAir"
+    },
+    {
+      "index": 18,
+      "name": "FractionAir"
+    },
+    {
+      "index": 19,
+      "name": "IsArgon"
+    },
+    {
+      "index": 20,
+      "name": "FractionArgon"
+    },
+    {
+      "index": 21,
+      "name": "IsKrypton"
+    },
+    {
+      "index": 22,
+      "name": "FractionKrypton"
+    },
+    {
+      "index": 23,
+      "name": "IsXenon"
+    },
+    {
+      "index": 24,
+      "name": "FractionXenon"
+    },
+    {
+      "index": 25,
+      "name": "IsCustom"
+    },
+    {
+      "index": 26,
+      "name": "Source"
+    },
+    {
+      "index": 27,
+      "name": "Description"
+    },
+    {
+      "index": 28,
+      "name": "Locked"
+    },
+    {
+      "index": 29,
+      "name": "Scratch"
+    }
+  ],
+  "repeated_field_groups": [],
+  "records_at_capture": [
+    {
+      "Id": "10000",
+      "Name": "Sample of AIR 6MM",
+      "CategoryId": "1",
+      "Thickness": "6"
+    }
+  ],
+  "field_observations": [
+    {
+      "field": "Id",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "10000"
+      ]
+    },
+    {
+      "field": "Name",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "Sample of AIR 6MM"
+      ]
+    },
+    {
+      "field": "CategoryId",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "1"
+      ]
+    },
+    {
+      "field": "Thickness",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "6"
+      ]
+    },
+    {
+      "field": "GasDefinition",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "1-Single Gas"
+      ]
+    },
+    {
+      "field": "ConductivityCoefficientA",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".002873"
+      ]
+    },
+    {
+      "field": "ConductivityCoefficientB",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".0000776"
+      ]
+    },
+    {
+      "field": "ConductivityCoefficientC",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "ViscosityCoefficientA",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".000003723"
+      ]
+    },
+    {
+      "field": "ViscosityCoefficientB",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".0000000494"
+      ]
+    },
+    {
+      "field": "ViscosityCoefficientC",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "SpecificHeatCoefficientA",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "1002.74"
+      ]
+    },
+    {
+      "field": "SpecificHeatCoefficientB",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".012324"
+      ]
+    },
+    {
+      "field": "SpecificHeatCoefficientC",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "MolecularWeight",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "28.97"
+      ]
+    },
+    {
+      "field": "SpecificHeatRatio",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "1.5"
+      ]
+    },
+    {
+      "field": "IsAir",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "1"
+      ]
+    },
+    {
+      "field": "FractionAir",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "1"
+      ]
+    },
+    {
+      "field": "IsArgon",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "FractionArgon",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".001"
+      ]
+    },
+    {
+      "field": "IsKrypton",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "FractionKrypton",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".001"
+      ]
+    },
+    {
+      "field": "IsXenon",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "FractionXenon",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        ".001"
+      ]
+    },
+    {
+      "field": "IsCustom",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "Source",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "BS EN 673 / E+"
+      ]
+    },
+    {
+      "field": "Description",
+      "non_empty_records": 0,
+      "unique_value_count": 1,
+      "sample_values": [
+        ""
+      ]
+    },
+    {
+      "field": "Locked",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "Scratch",
+      "non_empty_records": 1,
+      "unique_value_count": 1,
+      "sample_values": [
+        "0"
+      ]
+    }
+  ],
+  "generation_guidance": {
+    "internal_ddf_entry_name": "WindowGas.cdt",
+    "preserve_category_ids_line": true,
+    "preserve_header_order": true,
+    "required_record_field_count": 29,
+    "do_not_generate_before_mapping_is_locked": false
+  },
+  "external_reference_notes": [
+    "DesignBuilder support describes DDF as a ZIP archive containing separate CDT tables, including Glazing, Panes, and Window Gas.",
+    "DesignBuilder glazing layer data says material-layer glazing uses panes interspersed with window gas layers.",
+    "DesignBuilder export guidance says referenced user components should be included with exported data."
+  ],
+  "external_references": [
+    {
+      "title": "DesignBuilder Support - Working with DDF Files in Excel",
+      "url": "https://support.designbuilder.co.uk/support/solutions/articles/103000396938-working-with-ddf-files-in-excel"
+    },
+    {
+      "title": "DesignBuilder Help - Glazing layer data",
+      "url": "https://designbuilder.co.uk/helpv7.0/Content/_Glazing_layer_data.htm"
+    },
+    {
+      "title": "DesignBuilder Help - Import Components/Templates",
+      "url": "https://designbuilder.co.uk/helpv7.0/Content/Import_Components.htm"
+    },
+    {
+      "title": "DesignBuilder Help - Export Components/Templates",
+      "url": "https://designbuilder.co.uk/helpv7.0/Content/Export_Components_Templates1.htm"
+    }
+  ],
+  "notes": [
+    "This schema is captured from the current local Sample_Glazing.DDF entry WindowGas.cdt.",
+    "Treat this sample as the current local truth until another DesignBuilder export replaces it."
+  ]
+}

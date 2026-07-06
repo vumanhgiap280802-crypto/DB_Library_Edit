@@ -1,0 +1,6 @@
+﻿construction_code,construction_name,category,layer_order,material_name,thickness_override_m,notes
+D_MAIN_STEEL_0474,D_MAIN_STEEL_0474,Door,1,STEEL_SHEET_0012,,Main/technical steel door = 1.2mm steel sheet + 45mm insulated/fire core + 1.2mm steel sheet; Outside -> Inside
+D_MAIN_STEEL_0474,D_MAIN_STEEL_0474,Door,2,FIRE_DOOR_CORE_045,,
+D_MAIN_STEEL_0474,D_MAIN_STEEL_0474,Door,3,STEEL_SHEET_0012,,
+D_BEDROOM_MDF_035,D_BEDROOM_MDF_035,Door,1,MDF_HDF_DOOR_LEAF_035,,Bedroom/internal door = MDF/HDF door leaf 35mm
+D_WC_UPVC_024,D_WC_UPVC_024,Door,1,UPVC_DOOR_PANEL_024,,WC/wet room door = uPVC/plastic door panel 24mm
